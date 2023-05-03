@@ -21,6 +21,13 @@ namespace IDEEEEEEEEEEEEEEEEEEE
         string q, q1 = "", q2;
         char sl = '\\';
         int t, ch = 0;
+
+        //////////////////
+        //Синтаксис темы//
+        //////////////////
+
+        public FastColoredTextBoxNS.Style BlueStyle = new FastColoredTextBoxNS.TextStyle(Brushes.Blue, null, FontStyle.Italic);
+
         public Form2()
         {
             InitializeComponent();
@@ -193,7 +200,18 @@ namespace IDEEEEEEEEEEEEEEEEEEE
         {
             tema();
         }
+        #region Подсветка
+        private void fastColoredTextBox1_TextChanged(object sender, FastColoredTextBoxNS.TextChangedEventArgs e)
+        {
+            e.ChangedRange.ClearFoldingMarkers();
 
+            e.ChangedRange.SetFoldingMarkers("{", "}");
+            e.ChangedRange.SetFoldingMarkers("(", ")");
+            e.ChangedRange.SetFoldingMarkers("[", "]");
+            e.ChangedRange.SetFoldingMarkers("\"", "\"");
+            e.ChangedRange.SetFoldingMarkers("\'", "\'");
+        }
+        #endregion
         private void сохранитьКакToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string sq;
