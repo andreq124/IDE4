@@ -193,13 +193,6 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             docWR.Close();
         }
 
-        private void asdasdasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form3 frm3 = new Form3();
-            //frm3.frm2 = this;
-            frm3.Show();
-        }
-
         private void сменитьТемуToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tema();

@@ -39,8 +39,6 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             this.открытьФайлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сменитьТемуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dfgdfgdfgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.asdasdasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,8 +51,7 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
-            this.видToolStripMenuItem,
-            this.dfgdfgdfgToolStripMenuItem});
+            this.видToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
@@ -76,28 +73,28 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
             // 
             // сохранитьКакToolStripMenuItem
             // 
             this.сохранитьКакToolStripMenuItem.Name = "сохранитьКакToolStripMenuItem";
-            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.сохранитьКакToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.сохранитьКакToolStripMenuItem.Text = "Сохранить как";
             this.сохранитьКакToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКакToolStripMenuItem_Click);
             // 
             // закрытьToolStripMenuItem
             // 
             this.закрытьToolStripMenuItem.Name = "закрытьToolStripMenuItem";
-            this.закрытьToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.закрытьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.закрытьToolStripMenuItem.Text = "Закрыть";
             this.закрытьToolStripMenuItem.Click += new System.EventHandler(this.закрытьToolStripMenuItem_Click);
             // 
             // открытьФайлToolStripMenuItem
             // 
             this.открытьФайлToolStripMenuItem.Name = "открытьФайлToolStripMenuItem";
-            this.открытьФайлToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.открытьФайлToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.открытьФайлToolStripMenuItem.Text = "Открыть файл";
             this.открытьФайлToolStripMenuItem.Click += new System.EventHandler(this.открытьФайлToolStripMenuItem_Click);
             // 
@@ -115,21 +112,6 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             this.сменитьТемуToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.сменитьТемуToolStripMenuItem.Text = "Сменить тему";
             this.сменитьТемуToolStripMenuItem.Click += new System.EventHandler(this.сменитьТемуToolStripMenuItem_Click);
-            // 
-            // dfgdfgdfgToolStripMenuItem
-            // 
-            this.dfgdfgdfgToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.asdasdasToolStripMenuItem});
-            this.dfgdfgdfgToolStripMenuItem.Name = "dfgdfgdfgToolStripMenuItem";
-            this.dfgdfgdfgToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
-            this.dfgdfgdfgToolStripMenuItem.Text = "dfgdfgdfg";
-            // 
-            // asdasdasToolStripMenuItem
-            // 
-            this.asdasdasToolStripMenuItem.Name = "asdasdasToolStripMenuItem";
-            this.asdasdasToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.asdasdasToolStripMenuItem.Text = "asdasdas";
-            this.asdasdasToolStripMenuItem.Click += new System.EventHandler(this.asdasdasToolStripMenuItem_Click);
             // 
             // openFileDialog1
             // 
@@ -167,6 +149,7 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             this.fastColoredTextBox1.CharWidth = 8;
             this.fastColoredTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.fastColoredTextBox1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.fastColoredTextBox1.Font = new System.Drawing.Font("Courier New", 9.75F);
             this.fastColoredTextBox1.IsReplaceMode = false;
             this.fastColoredTextBox1.Location = new System.Drawing.Point(0, 45);
             this.fastColoredTextBox1.Name = "fastColoredTextBox1";
@@ -214,8 +197,6 @@ namespace IDEEEEEEEEEEEEEEEEEEE
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem видToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сменитьТемуToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dfgdfgdfgToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem asdasdasToolStripMenuItem;
         private FastColoredTextBoxNS.FastColoredTextBox fastColoredTextBox1;
     }
 }
