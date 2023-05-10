@@ -40,9 +40,9 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(723, 664);
+            this.button1.Location = new System.Drawing.Point(767, 575);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(476, 74);
+            this.button1.Size = new System.Drawing.Size(408, 64);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -50,9 +50,9 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(723, 766);
+            this.button2.Location = new System.Drawing.Point(767, 664);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(476, 74);
+            this.button2.Size = new System.Drawing.Size(408, 64);
             this.button2.TabIndex = 1;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
@@ -60,9 +60,9 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(723, 867);
+            this.button3.Location = new System.Drawing.Point(767, 751);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(476, 74);
+            this.button3.Size = new System.Drawing.Size(408, 64);
             this.button3.TabIndex = 2;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
@@ -71,8 +71,8 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 90F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(587, 26);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 90F);
+            this.label1.Location = new System.Drawing.Point(553, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(385, 159);
             this.label1.TabIndex = 3;
@@ -80,9 +80,9 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(1742, 74);
+            this.button4.Location = new System.Drawing.Point(1493, 64);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(78, 78);
+            this.button4.Size = new System.Drawing.Size(67, 68);
             this.button4.TabIndex = 4;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
@@ -94,9 +94,9 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1904, 981);
+            this.ClientSize = new System.Drawing.Size(1632, 850);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);

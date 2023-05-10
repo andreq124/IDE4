@@ -21,12 +21,16 @@ namespace IDEEEEEEEEEEEEEEEEEEE
         string q, q1 = "", q2;
         char sl = '\\';
         int t, ch = 0;
-
+        
         //////////////////
         //Синтаксис темы//
         //////////////////
 
-        public FastColoredTextBoxNS.Style BlueStyle = new FastColoredTextBoxNS.TextStyle(Brushes.Blue, null, FontStyle.Italic);
+        public FastColoredTextBoxNS.Style BlueStyle = new FastColoredTextBoxNS.TextStyle(Brushes.BlueViolet, null, FontStyle.Italic);
+        public FastColoredTextBoxNS.Style LightBlueStyle = new FastColoredTextBoxNS.TextStyle(Brushes.SteelBlue, null, FontStyle.Italic);
+        public FastColoredTextBoxNS.Style YellowStyle = new FastColoredTextBoxNS.TextStyle(Brushes.Yellow, null, FontStyle.Italic);
+        public FastColoredTextBoxNS.Style VioletStyle = new FastColoredTextBoxNS.TextStyle(Brushes.Violet, null, FontStyle.Italic);
+        public FastColoredTextBoxNS.Style GreenStyle = new FastColoredTextBoxNS.TextStyle(Brushes.Green, null, FontStyle.Italic);
 
         public Form2()
         {
@@ -206,10 +210,69 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             e.ChangedRange.ClearFoldingMarkers();
 
             e.ChangedRange.SetFoldingMarkers("{", "}");
-            e.ChangedRange.SetFoldingMarkers("(", ")");
-            e.ChangedRange.SetFoldingMarkers("[", "]");
-            e.ChangedRange.SetFoldingMarkers("\"", "\"");
-            e.ChangedRange.SetFoldingMarkers("\'", "\'");
+            e.ChangedRange.SetFoldingMarkers(@"#region\b", @"#endregion\b");
+            //Синенький
+            e.ChangedRange.SetStyle(BlueStyle, @"private"); 
+            e.ChangedRange.SetStyle(BlueStyle, @"public");
+            e.ChangedRange.SetStyle(BlueStyle, @"bool");
+            e.ChangedRange.SetStyle(BlueStyle, @"decimal");
+            e.ChangedRange.SetStyle(BlueStyle, @"long");
+            e.ChangedRange.SetStyle(BlueStyle, @"int");
+            e.ChangedRange.SetStyle(BlueStyle, @"ulong");
+            e.ChangedRange.SetStyle(BlueStyle, @"uint");
+            e.ChangedRange.SetStyle(BlueStyle, @"byte");
+            e.ChangedRange.SetStyle(BlueStyle, @"double");
+            e.ChangedRange.SetStyle(BlueStyle, @"float"); 
+            e.ChangedRange.SetStyle(BlueStyle, @"char");
+            e.ChangedRange.SetStyle(BlueStyle, @"string"); 
+            e.ChangedRange.SetStyle(BlueStyle, @"get");
+            e.ChangedRange.SetStyle(BlueStyle, @"set");
+            e.ChangedRange.SetStyle(BlueStyle, @"object");
+            e.ChangedRange.SetStyle(BlueStyle, @"var");
+            e.ChangedRange.SetStyle(BlueStyle, @"new");
+            e.ChangedRange.SetStyle(BlueStyle, @"void");
+            e.ChangedRange.SetStyle(BlueStyle, @"this");
+            e.ChangedRange.SetStyle(BlueStyle, @"using");
+            e.ChangedRange.SetStyle(BlueStyle, @"static");
+            e.ChangedRange.SetStyle(BlueStyle, @"namespase");
+            e.ChangedRange.SetStyle(BlueStyle, @"class");
+            e.ChangedRange.SetStyle(BlueStyle, @"partical");
+            e.ChangedRange.SetStyle(BlueStyle, @"internal"); 
+            e.ChangedRange.SetStyle(BlueStyle, @"args");
+            e.ChangedRange.SetStyle(BlueStyle, @"null");
+            //Голубой
+            e.ChangedRange.SetStyle(LightBlueStyle, @"sender");
+            e.ChangedRange.SetStyle(LightBlueStyle, @"e");
+            //Жёлтенький
+            e.ChangedRange.SetStyle(YellowStyle, @"Main");
+            e.ChangedRange.SetStyle(YellowStyle, @"WriteLine");
+            e.ChangedRange.SetStyle(YellowStyle, @"Write");
+            e.ChangedRange.SetStyle(YellowStyle, @"ReadLine");
+            e.ChangedRange.SetStyle(YellowStyle, @"Read");
+            e.ChangedRange.SetStyle(YellowStyle, @"Parse");
+            e.ChangedRange.SetStyle(YellowStyle, @"TryParse");
+            e.ChangedRange.SetStyle(YellowStyle, @"ReadKey");
+            e.ChangedRange.SetStyle(YellowStyle, @"Clear");
+            e.ChangedRange.SetStyle(YellowStyle, @"Equals");
+            e.ChangedRange.SetStyle(YellowStyle, @"Beep");
+            e.ChangedRange.SetStyle(YellowStyle, @"GetCursorPosition");
+            e.ChangedRange.SetStyle(YellowStyle, @"ToInt8"); 
+            e.ChangedRange.SetStyle(YellowStyle, @"ToInt16");
+            e.ChangedRange.SetStyle(YellowStyle, @"ToInt32"); 
+            e.ChangedRange.SetStyle(YellowStyle, @"ToDouble");
+            //Фиолетовенький
+            e.ChangedRange.SetStyle(VioletStyle, @"if");
+            e.ChangedRange.SetStyle(VioletStyle, @"else");
+            e.ChangedRange.SetStyle(VioletStyle, @"for");
+            e.ChangedRange.SetStyle(VioletStyle, @"do");
+            e.ChangedRange.SetStyle(VioletStyle, @"while");
+            e.ChangedRange.SetStyle(VioletStyle, @"try");
+            e.ChangedRange.SetStyle(VioletStyle, @"catch");
+            //Зелёненький
+            e.ChangedRange.SetStyle(GreenStyle, @"Program");
+            e.ChangedRange.SetStyle(GreenStyle, @"Console");
+            e.ChangedRange.SetStyle(GreenStyle, @"Convert");
+
         }
         #endregion
         private void сохранитьКакToolStripMenuItem_Click(object sender, EventArgs e)
@@ -257,58 +320,5 @@ namespace IDEEEEEEEEEEEEEEEEEEE
                 }
             }
         }
-
-        /////////////
-        // Цифорки //
-        /////////////
-
-        //private void updateNumberLabel()
-        //{
-        //    //we get index of first visible char and number of first visible line
-        //    Point pos = new Point(0, 0);
-        //    int firstIndex = richTextBox1.GetCharIndexFromPosition(pos);
-        //    int firstLine = richTextBox1.GetLineFromCharIndex(firstIndex);
-
-        //    //now we get index of last visible char and number of last visible line
-        //    pos.X = ClientRectangle.Width;
-        //    pos.Y = ClientRectangle.Height;
-        //    int lastIndex = richTextBox1.GetCharIndexFromPosition(pos);
-        //    int lastLine = richTextBox1.GetLineFromCharIndex(lastIndex);
-
-        //    //this is point position of last visible char, we'll use its Y value for calculating numberLabel size
-        //    pos = richTextBox1.GetPositionFromCharIndex(lastIndex);
-
-        //    //finally, renumber label
-        //    numberLabel.Text = "";
-        //    for (int i = firstLine; i <= lastLine + 1; i++)
-        //    {
-        //        numberLabel.Text += i + 1 + "\n";
-        //    }
-
-        //}
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        //private void richTextBox1_TextChanged(object sender, EventArgs e)
-        //{
-        //    updateNumberLabel();
-        //}
-
-        //private void richTextBox1_VScroll(object sender, EventArgs e)
-        //{
-        //    int d = richTextBox1.GetPositionFromCharIndex(0).Y %
-        //                              (richTextBox1.Font.Height + 1);
-        //    numberLabel.Location = new Point(0, d);
-        //    updateNumberLabel();
-        //}
-
-        //private void richTextBox1_FontChanged(object sender, EventArgs e)
-        //{
-        //    updateNumberLabel();
-        //    richTextBox1_VScroll(null, null);
-        //}
     }
 }

@@ -61,26 +61,40 @@ namespace IDEEEEEEEEEEEEEEEEEEE
 
         private void button1_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.ShowDialog(this);
-            s = saveFileDialog1.FileName;
-            FileStream fstream = null;
-            fstream = new FileStream(s, FileMode.OpenOrCreate);
-            fstream?.Close();
+            try
+            {
+                saveFileDialog1.ShowDialog(this);
+                s = saveFileDialog1.FileName;
+                FileStream fstream = null;
+                fstream = new FileStream(s, FileMode.OpenOrCreate);
+                fstream?.Close();
 
-            Form2 frm2 = new Form2();
-            frm2.frm1 = this;
-            frm2.Show();
-            this.Hide();
+                Form2 frm2 = new Form2();
+                frm2.frm1 = this;
+                frm2.Show();
+                this.Hide();
+            } 
+            catch
+            {
+                MessageBox.Show("Укажите файл", "Ошибка", MessageBoxButtons.OK);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
-            s = openFileDialog1.FileName;
-            Form2 frm2 = new Form2();
-            frm2.frm1 = this;
-            frm2.Show();
-            this.Hide();
+            try
+            {
+                openFileDialog1.ShowDialog();
+                s = openFileDialog1.FileName;
+                Form2 frm2 = new Form2();
+                frm2.frm1 = this;
+                frm2.Show();
+                this.Hide();
+            }
+            catch
+            {
+                MessageBox.Show("Укажите файл", "Ошибка", MessageBoxButtons.OK);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
