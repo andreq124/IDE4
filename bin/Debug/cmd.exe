@@ -1,0 +1,4 @@
+@echo off
+echo lol
+echo Hello
+pause
