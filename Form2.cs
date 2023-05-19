@@ -213,7 +213,7 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             //System.Diagnostics.Process t = new System.Diagnostics.Process();
             //t.StartInfo.FileName = "cmd.exe";
             //t.Start();
-
+            
             //string strCmdText;
             //strCmdText = "help";
             //System.Diagnostics.Process.Start("cmd.exe", strCmdText);
@@ -230,6 +230,11 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             ////psi.Arguments = "/k csc -?";
             Process.Start(@"C:\Windows\System32\cmd.exe", str);
 
+        }
+
+        private void поддержатьРазработчикаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://donatty.com/topIDEbesplatno");
         }
 
 

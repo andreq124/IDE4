@@ -44,6 +44,7 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label1 = new System.Windows.Forms.Label();
             this.fastColoredTextBox1 = new FastColoredTextBoxNS.FastColoredTextBox();
+            this.поддержатьРазработчикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fastColoredTextBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +54,8 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
             this.видToolStripMenuItem,
-            this.runToolStripMenuItem});
+            this.runToolStripMenuItem,
+            this.поддержатьРазработчикаToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
@@ -158,7 +160,6 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             this.fastColoredTextBox1.CharWidth = 8;
             this.fastColoredTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.fastColoredTextBox1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.fastColoredTextBox1.Font = new System.Drawing.Font("Courier New", 9.75F);
             this.fastColoredTextBox1.IsReplaceMode = false;
             this.fastColoredTextBox1.Location = new System.Drawing.Point(0, 45);
             this.fastColoredTextBox1.Name = "fastColoredTextBox1";
@@ -170,6 +171,13 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             this.fastColoredTextBox1.Text = "fastColoredTextBox1";
             this.fastColoredTextBox1.Zoom = 100;
             this.fastColoredTextBox1.TextChanged += new System.EventHandler<FastColoredTextBoxNS.TextChangedEventArgs>(this.fastColoredTextBox1_TextChanged);
+            // 
+            // поддержатьРазработчикаToolStripMenuItem
+            // 
+            this.поддержатьРазработчикаToolStripMenuItem.Name = "поддержатьРазработчикаToolStripMenuItem";
+            this.поддержатьРазработчикаToolStripMenuItem.Size = new System.Drawing.Size(165, 20);
+            this.поддержатьРазработчикаToolStripMenuItem.Text = "Поддержать разработчика";
+            this.поддержатьРазработчикаToolStripMenuItem.Click += new System.EventHandler(this.поддержатьРазработчикаToolStripMenuItem_Click);
             // 
             // Form2
             // 
@@ -208,5 +216,6 @@ namespace IDEEEEEEEEEEEEEEEEEEE
         private System.Windows.Forms.ToolStripMenuItem сменитьТемуToolStripMenuItem;
         private FastColoredTextBoxNS.FastColoredTextBox fastColoredTextBox1;
         private System.Windows.Forms.ToolStripMenuItem runToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem поддержатьРазработчикаToolStripMenuItem;
     }
 }
