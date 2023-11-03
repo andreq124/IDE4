@@ -15,6 +15,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using System.Diagnostics;
 using System.CodeDom.Compiler;
 using Microsoft.CSharp;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace IDEEEEEEEEEEEEEEEEEEE
 {
@@ -63,10 +64,16 @@ namespace IDEEEEEEEEEEEEEEEEEEE
                 закрытьToolStripMenuItem.ForeColor = Color.White;
                 открытьФайлToolStripMenuItem.BackColor = Color.Black;
                 открытьФайлToolStripMenuItem.ForeColor = Color.White;
+                сменитьТемуToolStripMenuItem.BackColor = Color.Black;
+                сменитьТемуToolStripMenuItem.ForeColor = Color.White;
                 fastColoredTextBox1.BackColor = Color.Black;
                 fastColoredTextBox1.ForeColor = Color.White;
                 fastColoredTextBox1.LineNumberColor = Color.White;
                 fastColoredTextBox1.IndentBackColor = Color.Black;
+                textBox1.BackColor = Color.Black;
+                textBox1.ForeColor = Color.White;
+                button1.BackColor = Color.Black;
+                button1.ForeColor = Color.White;
             }
             else if (t == 1)
             {
@@ -84,10 +91,16 @@ namespace IDEEEEEEEEEEEEEEEEEEE
                 закрытьToolStripMenuItem.ForeColor = Color.Black;
                 открытьФайлToolStripMenuItem.BackColor = Color.White;
                 открытьФайлToolStripMenuItem.ForeColor = Color.Black;
+                сменитьТемуToolStripMenuItem.BackColor = Color.White;
+                сменитьТемуToolStripMenuItem.ForeColor = Color.Black;
                 fastColoredTextBox1.BackColor = Color.White;
                 fastColoredTextBox1.ForeColor = Color.Black;
                 fastColoredTextBox1.LineNumberColor = Color.Black;
                 fastColoredTextBox1.IndentBackColor = Color.White;
+                textBox1.BackColor = Color.White;
+                textBox1.ForeColor = Color.Black;
+                button1.BackColor = Color.White;
+                button1.ForeColor = Color.Black;
             }
             StreamReader docOp = new StreamReader(frm1.s);
             fastColoredTextBox1.Text = docOp.ReadToEnd();
@@ -125,10 +138,16 @@ namespace IDEEEEEEEEEEEEEEEEEEE
                 закрытьToolStripMenuItem.ForeColor = Color.White;
                 открытьФайлToolStripMenuItem.BackColor = Color.Black;
                 открытьФайлToolStripMenuItem.ForeColor = Color.White;
+                сменитьТемуToolStripMenuItem.BackColor = Color.Black;
+                сменитьТемуToolStripMenuItem.ForeColor= Color.White;
                 fastColoredTextBox1.BackColor = Color.Black;
                 fastColoredTextBox1.ForeColor = Color.White;
                 fastColoredTextBox1.LineNumberColor = Color.White;
                 fastColoredTextBox1.IndentBackColor = Color.Black;
+                textBox1.BackColor = Color.Black;
+                textBox1.ForeColor = Color.White;
+                button1.BackColor = Color.Black;
+                button1.ForeColor = Color.White;
             }
             else if (t == 1)
             {
@@ -146,10 +165,16 @@ namespace IDEEEEEEEEEEEEEEEEEEE
                 закрытьToolStripMenuItem.ForeColor = Color.Black;
                 открытьФайлToolStripMenuItem.BackColor = Color.White;
                 открытьФайлToolStripMenuItem.ForeColor = Color.Black;
+                сменитьТемуToolStripMenuItem.BackColor = Color.White;
+                сменитьТемуToolStripMenuItem.ForeColor = Color.Black;
                 fastColoredTextBox1.BackColor = Color.White;
                 fastColoredTextBox1.ForeColor = Color.Black;
                 fastColoredTextBox1.LineNumberColor = Color.Black;
                 fastColoredTextBox1.IndentBackColor = Color.White;
+                textBox1.BackColor = Color.White;
+                textBox1.ForeColor = Color.Black;
+                button1.BackColor = Color.White;
+                button1.ForeColor = Color.Black;
             }
         }
 
@@ -207,29 +232,39 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             //////////////////////////
             //Press f to pay respect// 
             //////////////////////////
+            
             StreamWriter docWR = new StreamWriter(frm1.s);
             docWR.WriteLine(fastColoredTextBox1.Text);
             docWR.Close();
-            //System.Diagnostics.Process t = new System.Diagnostics.Process();
-            //t.StartInfo.FileName = "cmd.exe";
-            //t.Start();
             
-            //string strCmdText;
-            //strCmdText = "help";
-            //System.Diagnostics.Process.Start("cmd.exe", strCmdText);
-            ProcessStartInfo psi = new ProcessStartInfo();
-            psi.FileName = "cmd.exe";
-            string str = @"/K cd C:\Windows\Microsoft.NET\Framework64\v4.0.30319&csc "+q;
+            CSharpCodeProvider codeProvider = new CSharpCodeProvider();
+            ICodeCompiler icc = codeProvider.CreateCompiler();
+            string q = frm1.s.ToString();
+            string exeFile = "";
+            for (int i = 0; i < (q.Length - 3); i++)
+                exeFile += q[i];
+            exeFile += ".exe";
+            System.CodeDom.Compiler.CompilerParameters parameters = new CompilerParameters();
+            parameters.GenerateExecutable = true;
+            parameters.OutputAssembly = exeFile;
+            CompilerResults results = icc.CompileAssemblyFromSource(parameters, fastColoredTextBox1.Text);
 
-            ////string kom = "/k csc ";
-            ////kom += frm1.s;
-            ////psi.WorkingDirectory = @"/k cd C:\Windows\Microsoft.NET\Framework64\v4.0.30319";
-            ////psi.Arguments = @"/c cd C:\Windows\Microsoft.NET\Framework64\v4.0.30319 csc" + frm1.s;
-
-            Console.ReadLine();
-            ////psi.Arguments = "/k csc -?";
-            Process.Start(@"C:\Windows\System32\cmd.exe", str);
-
+         
+            if (results.Errors.Count > 0)
+            {
+                foreach (CompilerError CompErr in results.Errors)
+                {
+                    textBox1.Text = textBox1.Text +
+                        "Line number " + CompErr.Line +
+                        ", Error Number: " + CompErr.ErrorNumber +
+                        ", '" + CompErr.ErrorText + ";" +
+                        Environment.NewLine + Environment.NewLine;
+                }
+            }
+            else
+            {
+                Process.Start(exeFile);
+            }
         }
 
         private void поддержатьРазработчикаToolStripMenuItem_Click(object sender, EventArgs e)
@@ -237,6 +272,10 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             System.Diagnostics.Process.Start("https://donatty.com/topIDEbesplatno");
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = string.Empty;
+        }
 
         #region Подсветка
         private void fastColoredTextBox1_TextChanged(object sender, FastColoredTextBoxNS.TextChangedEventArgs e)
