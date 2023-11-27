@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -21,6 +22,24 @@ namespace IDEEEEEEEEEEEEEEEEEEE
 {
     public partial class Form2 : Form
     {
+        PrivateFontCollection font;
+        private void fontsProjects()
+        {
+            //Добавляем шрифт из указанного файла в em.Drawing.Text.PrivateFontCollection
+            this.font = new PrivateFontCollection();
+            this.font.AddFontFile("font/UtromPressKachat.ttf"); ;
+        }
+
+        private void fonts()
+        {
+            //Задаем шрифт текста, отображаемого элементом управления.
+            label1.Font = new Font(font.Families[0], 11);
+            menuStrip1.Font = new Font(font.Families[0], 11);
+            //button2.Font = new Font(font.Families[0], 11);
+            //button3.Font = new Font(font.Families[0], 11);
+            //button4.Font = new Font(font.Families[0], 11);
+        }
+
         public Form1 frm1 { get; set; }
         string q, q1 = "", q2;
         char sl = '\\';
@@ -40,6 +59,8 @@ namespace IDEEEEEEEEEEEEEEEEEEE
         public Form2()
         {
             InitializeComponent();
+            fontsProjects();
+            fonts();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -102,12 +123,28 @@ namespace IDEEEEEEEEEEEEEEEEEEE
                 button1.BackColor = Color.White;
                 button1.ForeColor = Color.Black;
             }
-            StreamReader docOp = new StreamReader(frm1.s);
-            fastColoredTextBox1.Text = docOp.ReadToEnd();
-            docOp.Close();
-            lab();
-            //openFileDialog1.Filter = "Файлы кода (*.cs)|*.cs|All files (*.*)|*.*";
-            saveFileDialog1.Filter = "Файлы кода (*.cs)|*.cs|All files (*.*)|*.*";
+            try
+            {
+                if (frm1.gg == 0)
+                {
+                    StreamReader docOp = new StreamReader(frm1.s);
+                    fastColoredTextBox1.Text = docOp.ReadToEnd();
+                    docOp.Close();
+                }
+                else if(frm1.gg == 1)
+                {
+                    StreamReader docOp = new StreamReader("start.txt");
+                    fastColoredTextBox1.Text = docOp.ReadToEnd();
+                    docOp.Close();
+                }
+                lab();
+                //openFileDialog1.Filter = "Файлы кода (*.cs)|*.cs|All files (*.*)|*.*";
+                saveFileDialog1.Filter = "Файлы кода (*.cs)|*.cs|All files (*.*)|*.*";
+            }
+            catch
+            {
+
+            }
         }
 
         void tema()

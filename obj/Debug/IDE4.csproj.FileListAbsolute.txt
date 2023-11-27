@@ -47,3 +47,16 @@ C:\Users\user\source\repos\ИДЕ\IDE4\obj\Debug\IDE4.csproj.CoreCompileInputs.c
 C:\Users\user\source\repos\ИДЕ\IDE4\obj\Debug\IDE4.csproj.CopyComplete
 C:\Users\user\source\repos\ИДЕ\IDE4\obj\Debug\IDE4.exe
 C:\Users\user\source\repos\ИДЕ\IDE4\obj\Debug\IDE4.pdb
+E:\Andrey\С#\Курсач\IDE4\bin\Debug\IDE4.exe.config
+E:\Andrey\С#\Курсач\IDE4\bin\Debug\IDE4.exe
+E:\Andrey\С#\Курсач\IDE4\bin\Debug\IDE4.pdb
+E:\Andrey\С#\Курсач\IDE4\obj\Debug\IDE4.csproj.AssemblyReference.cache
+E:\Andrey\С#\Курсач\IDE4\obj\Debug\IDE4.csproj.SuggestedBindingRedirects.cache
+E:\Andrey\С#\Курсач\IDE4\obj\Debug\IDEEEEEEEEEEEEEEEEEEE.Form1.resources
+E:\Andrey\С#\Курсач\IDE4\obj\Debug\IDEEEEEEEEEEEEEEEEEEE.Form2.resources
+E:\Andrey\С#\Курсач\IDE4\obj\Debug\IDE4.Properties.Resources.resources
+E:\Andrey\С#\Курсач\IDE4\obj\Debug\IDE4.csproj.GenerateResource.cache
+E:\Andrey\С#\Курсач\IDE4\obj\Debug\IDE4.csproj.CoreCompileInputs.cache
+E:\Andrey\С#\Курсач\IDE4\obj\Debug\IDE4.csproj.CopyComplete
+E:\Andrey\С#\Курсач\IDE4\obj\Debug\IDE4.exe
+E:\Andrey\С#\Курсач\IDE4\obj\Debug\IDE4.pdb

@@ -94,7 +94,7 @@ namespace IDEEEEEEEEEEEEEEEEEEE
             // 
             this.закрытьToolStripMenuItem.Name = "закрытьToolStripMenuItem";
             this.закрытьToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.закрытьToolStripMenuItem.Text = "Закрыть";
+            this.закрытьToolStripMenuItem.Text = "Прекратить сатанизм";
             this.закрытьToolStripMenuItem.Click += new System.EventHandler(this.закрытьToolStripMenuItem_Click);
             // 
             // открытьФайлToolStripMenuItem
